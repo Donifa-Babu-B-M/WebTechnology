@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script type="text/javascript" src="ascii.js"> </script>
+        angular.module("myFirst",[]);
+    </script>
+<title>
+    ASCII CONVERTER
+</title>
+<body>
+<h1>ASCII CONVERTER</h1>
+<div ng-app="myFirst">
+    <p>Enter Character : </p>
+    <input type="text" ng-model="Character" ng-keyup="cal()" >
+
+    <1--<p>The Ascii value is {{String.charCodeAt(Character)}}</p>-->
+    <p>The Ascii value is {{ total }}</p>
+</div>
+
+</body>
+</html>

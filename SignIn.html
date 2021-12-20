@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<style type="text/css">
+head{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 250px;
+}
+body{
+    background-image: url("Intro2.jpg");
+    background-size: 100%;
+    font-size: 100 px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-repeat: no-repeat;
+    margin:15px;
+    padding:10px;
+ 
+}
+form {
+    background-color: rgb(5, 5, 5);
+    color:white;
+    width:30%;
+    margin:70px;
+    opacity: 0.9;
+    padding:15px;
+}
+button{
+    background-color:cornsilk;
+    color:black;
+    width:100px;
+    text-align: center; 
+    cursor:pointer;
+    display:inline-block;
+    text-decoration:none;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    height: 40px;
+
+ 
+    }
+
+
+button:hover
+{
+    cursor: pointer;
+    background: black;
+    color: cornsilk;
+    text-decoration:none;
+}
+</style>
+<Head>
+    <title>Sign In</title>
+    <h1> HEALTH MONITORING SYSTEM </h1>
+</Head>
+<body>
+    
+    <form action="RegisterCred.php" method="POST" >
+        <h3>SignIn</h3>
+        <label for ="Name"> Name : </label>
+        <input type= "text" id="name" name="Name" required><br><br>
+        <label for ="Name"> DOB : </label>
+        <input type= "date" id="dob" name="DOB" required><br>
+        <br>
+        <label for ="Name"> User Name : </label>
+        <input type= "text" id="uname" name="Username" required><br>
+        <br>
+        <label for ="Name"> Email ID : </label>
+        <input type= "text" id="email" name="Email" required><br>
+        <br>
+        <label for = "Pwd"> Password  : </label>
+        <input type="password" id="pwd" name="Password" required>
+        <br><br>
+        <label for = "RPwd"> Retype Password  : </label>
+        <input type="password" id="rpwd" name="Retype_Password" required>
+        <br><br>
+        <input type="checkbox" required >
+        <label for="Auth" >Ensure that I am not a robot !</label>
+        <br><br>
+        <button type="Submit" value="Submit"> Submit </button> 
+            <br>
+            <br>
+          <a href = Login.html style="text-decoration: none; "> Already Have an Account ? </a>
+        
+        <br>
+        <br>
+    </form>
+</body>
+</html>

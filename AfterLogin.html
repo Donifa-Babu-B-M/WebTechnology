@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #page{
+            width:50%
+
+        }
+        .loader {
+          border: 10px solid #f3f3f3;
+          border-radius: 50%;
+          border-top: 16px solid #141414;
+          width: 60px;
+          height: 60px;
+          -webkit-animation: spin 2s linear infinite; /* Safari */
+          animation: spin 2s linear infinite;
+        }
+        
+        /* Safari */
+        @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+        
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        </style>
+    <head>
+        <div id="page">
+        <meta http-equiv="refresh" content="10;url=Home.html" />
+        <div id="loader" class="loader"></div>
+    </head>
+    <body>
+        <h1>Redirecting in 10 seconds...</h1>
+    </body>
+</div>
+</html>

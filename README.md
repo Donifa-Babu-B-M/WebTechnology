@@ -1,2 +1,2 @@
 # WebTechnology
-The Repository to store and update files that are being used in the web application
+A repository to update and store all the files

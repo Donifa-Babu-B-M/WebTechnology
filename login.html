@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<style type="text/css">
+
+head{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 250px;
+}
+body{
+    background-image: url("Intro2.jpg");
+    background-size: 100%;
+    font-size: 100 px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-repeat: no-repeat;
+    margin:15px;
+    padding:10px;
+ 
+}
+form {
+    background-color: rgb(5, 5, 5);
+    color:white;
+    width:30%;
+    margin:70px;
+    opacity: 0.9;
+    padding:15px;
+}
+button{
+    background-color:cornsilk;
+    color:black;
+    width:100px;
+    text-align: center; 
+    cursor:pointer;
+    display:inline-block;
+    text-decoration:none;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    height: 40px;
+
+ 
+    }
+
+
+button:hover
+{
+    cursor: pointer;
+    background: black;
+    color: cornsilk;
+    text-decoration:none;
+}
+</style>
+<script>
+    function myFunction() {
+      alert("Successfully logged in..!!");
+    }
+    </script>
+<Head>
+    <title>Login</title>
+    <h1> HEALTH MONITORING SYSTEM </h1>
+</Head>
+<body>
+    
+    <form action="LoginCred.php" method ="POST" >
+        <h3>SignUp</h3>
+        <label for ="Name"> User Name : </label>
+        <input type= "text" id="uname" name="Username" required><br>
+        <br>
+        <label for = "Pwd"> Password  : </label>
+        <input type="password" id="pwd" name="Password" required>
+        <br><br>
+        <input type="checkbox" required >
+        <label for="Auth" >Ensure that I am not a robot !</label>
+        <br><br>
+        <button type="Submit" value="Submit" onsubmit="LoginCred.php"> <a href = Home.html  style="text-decoration: none; "></a>LogIn</button>
+           
+            <br>
+            <br>
+        <a href = SignIn.html style="text-decoration: none; "> New User ? </a>
+        
+        <br>
+        <br>
+    </form>
+</body>
+</html>

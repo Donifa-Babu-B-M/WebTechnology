@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="caseApp">
+
+
+<style>
+body{
+    text-align:center ;
+    margin-left:300px;
+    width:50%;
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size:1500px;
+    font-size: 25px;
+    color:black;
+}
+input{
+    height:30px;
+    width:150px;
+    font-size:25px;
+    border: solid black;
+    background-color:white;
+    color:black;
+    font-family:Aerial;
+}
+p{
+    font-size: 40px;
+}
+</style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script type="text/javascript" src="ConversionFtoI.js"></script>
+ 
+    <script>
+    angular.module('caseApp', [])
+    .controller('caseController', caseController);
+    caseController.$inject = ['$scope', '$filter'];
+    function caseController($scope, $filter) {
+    $scope.number=(document.getElementById("number"));
+    $scope.conv="The value is rounded as "+$filter('number')(number,0);
+    $scope.Conv=function(){
+    $scope.conv="The value is rounded as "+$filter('number')(number,0); 
+    }  
+    }
+    </script>
+    <body>
+        <head>
+        <title>Float To Integer Converter</title>
+        </head>
+        <div id="head">
+        <h1>Float To Integer Converter</h1>
+        </div>
+        <div ng-app="caseApp" ng-controller="caseController">
+        <p> Enter the value here</p>
+        <input type="number" id="number" placeholder="Float Value" ng-model="number">
+        <br>
+        <br>
+        <span> The value is rounded to {{number | number:0}}</span>
+        </div>
+        </body>
+</html>

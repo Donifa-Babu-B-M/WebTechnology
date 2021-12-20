@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+body{
+  background-image:url("bg3.jpg")
+}
+#header{
+    font-family:Tahoma, sans-serif;
+    font-size: 50px;
+    color:rgb(87, 86, 82);
+    text-align:center;
+    width:100%;
+    margin-left:25px;
+}
+
+#header span a {
+    /*background-color:cornsilk;*/
+   color:Black;
+   opacity:0.8;
+  text-align: center;
+  font-size: 40px;
+  padding: 0px;
+  width:100%;
+  height:5px;
+  margin-left: 30px;
+  margin-top:30px;
+  text-decoration: none;
+  
+}
+
+#header span {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+#header span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0.5;
+  top: 0;
+  right: -30px;
+  transition: 0.5s;
+  
+}
+
+#header span:hover {
+  padding-right: 30px;
+  color:Black;
+  background-color: Grey;
+}
+
+#header button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+body{
+    background-color:black;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin:0px;
+
+}
+
+#slit{
+    height:20px;
+    width:100%;
+    margin : 0px auto;
+    background-color:White;
+    padding:0px;
+}
+
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  width: 25%;
+  padding: 10px;
+  height:50px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+  padding:10px;
+  width:400px;
+  height:400px;
+  margin:0px auto;
+  width:70%;
+}
+
+.column img:hover {
+  opacity: 0.5;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top:100px;
+  margin-right:0px;
+}
+h2{
+  color:White;
+}
+td, th {
+  border: 1px solid #f1f1f1;
+  text-align: left;
+  padding: 8px;
+  color:whitesmoke;
+}
+/*
+tr:nth-child(even) {
+  background-color: #dddddd;
+}*/
+
+#section{
+ margin:0px auto;
+  width:70%;
+  align-items: center;
+  
+}
+</style>
+<head>
+<title>Dashboard</title>
+</head>
+<body>
+<div id="slit">
+
+</div>
+
+<div id="header">
+  <h3>Dashboard</h3>
+
+<span> <a href ="Profile.html" class ="button" style="text-decoration: none; ">Click here to upload new activity</a> </span>
+</div>
+
+<!--
+<div id="row">
+  <div id="column">
+    
+    <table>
+           <tr>
+        <th>ACTIVITY</th>
+        <th>DATE OF ACTIVITY</th>
+        <th>HEIGHT</th>
+        <th>WEIGHT</th>
+  
+      </tr>
+      <tr>
+        <td>Jogging</td>
+        <td>11/08/2021</td>
+        <td>155</td>
+        <td>55</td>
+      </tr>
+
+      <tr>
+        <td>Yoga</td>
+        <td>12/08/2021</td>
+        <td>155</td>
+        <td>55.02</td>
+      </tr>
+    </table>
+    
+  </div>
+  <br>-->
+  <br>
+  <div id="column">
+<section style="align-items: center;">
+  <img class="mySlides" src="check1.jpg" style="width:100%">
+  <img class="mySlides" src="blood1.jpg" style="width:100%">
+  <img class="mySlides" src="bk8.jpg" style="width:100%">
+  <img class="mySlides" src="bk9.jpg" style="width:100%">
+  <img class="mySlides" src="bk10.jpg" style="width:100%">
+</section>
+
+</div>
+
+</div>
+<!-- The four columns 
+<div class="row">
+  <div class="column">
+    <img src="Check.jpg" alt="FirstMonth" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="Check1.jpg" alt="SecondMonth" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="Check2.jpg" alt="ThirdMonth"  onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="Check3.jpg" alt="FourthMonth"  onclick="myFunction(this);">
+  </div>
+</div>
+-->
+
+<script>
+  // Automatic Slideshow - change image every 3 seconds
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+  }
+  </script>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<html>
+    <style>
+        body{
+            background-image: url(bg2.jpg);
+            background-repeat:no-repeat;
+            background-size: 1400px;
+            width:100%;
+        }
+        button{
+            font-size: 25px;
+            background-color: black;
+            color: cornsilk;
+            width:150px;
+            height:40px;
+            text-align: center;
+            margin-left:570px;
+            cursor:pointer;
+        }
+        button:hover{
+            background-color: cornsilk;
+            color: black;
+        }
+        h1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 50px;
+            text-align: center;
+        }
+        img{
+            margin-left:500px;
+        }
+    </style>
+<head>
+    <title>Image Changer</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+</head>
+    
+<body>
+    <br>
+    <br>
+    <h1>Angular Image Changer On Click</h1>
+    <div ng-app="MyApp" ng-controller="MyController">
+        <img ng-src="{{Image.Photo}}" style="height: 200px; width: 300px; cursor: pointer" />
+            <br>
+            <br>
+            <br>
+            <br>
+            <button type="submit" ng-model="name" ng-click="ImageClick()"><b>{{ name.name }}</b></button>
+        
+    </div>
+</body>
+    
+<script type="text/javascript">
+    var app = angular.module('MyApp', []);
+       
+    app.controller('MyController', function ($scope, $interval) {
+        $scope.Images = [
+                { Id: 1, Photo: "pic_2.jpg" ,  },
+                { Id: 2, Photo: "pic_1.jpg",  },
+             
+               ];
+
+               $scope.names = [
+                { Id: 1, name:"DOG" , },
+                { Id: 2, name: "CAT",  },
+             
+               ];       
+   
+        $scope.Image = $scope.Images[0];
+
+        $scope.name=$scope.names[0];
+        var index = 1;
+        
+        $scope.ImageClick = function () {
+            $scope.Image = $scope.Images[index];
+            $scope.name=$scope.names[index];
+            index++;
+   
+            if (index > $scope.Images.length - 1) {
+                index = 0
+            }
+        };
+    });
+</script>
+</html>

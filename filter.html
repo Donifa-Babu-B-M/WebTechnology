@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+    <html ng-app="FilterApp">
+    <style>
+body{
+text-align: center;
+background-image:url("cool.jpg");
+background-repeat:no-repeat;
+background-size:1500px;
+}
+h1{
+font-size: 60px;
+        }  
+h2{
+font-size: 50px;
+        }
+
+table{
+    border: 2px solid black;
+    background-color: cornsilk;
+  padding: 5px;
+  align-items: center;
+margin-left: 500px;
+  font-size: 25px;
+}
+table th{
+    border: 2px solid black;
+  padding: 8px;
+}
+table tr :hover{
+    background-color: grey;
+    }
+p{
+    font-size:20px;
+}    
+input{
+    height:30px;
+    width:150px;
+    font-size:25px;
+    border: solid black;
+    background-color:white;
+    color:black;
+    padding:8px;
+    font-family:Aerial;
+}
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script type="text/javascript" src="filter.js"></script>
+    <head>
+    <title> Built In Filter </title>
+    </head>
+    <body>
+    <div id="head">
+    <h1>Built In Filter </h1>
+    </div>
+    <div ng-app="FilterApp" ng-controller="FilterController">
+    <h2>Student-Grade Details</h2>
+    <!--<table>
+        <p ng-repeat="person in Details">{{ person.name }} has {{ person.grade }} grade</p>
+        <th>Sno </th><th>Name </th><th>Grade </th>
+        <tr ng-repeat="person in Details"><td>{{$index + 1}}</td><td>{{person.name}}</td><td>{{person.grade}}</td></tr>
+    </table>-->
+        <p>Enter the grade here to filter</p>
+    <input ng-model="grade" type="text" ><br>
+   
+
+    <ul >
+        <table>
+            <th>Sno </th><th>Name </th><th>Grade </th>
+ <tr ng-repeat = "person in Details | filter: grade "><td>{{$index + 1}}</td><td>{{person.name}}</td><td>{{person.grade}}</td></tr></table>
+
+  </ul>
+
+
+
+
+    <script>
+    angular.module('FilterApp', [])
+    .controller('FilterController', function($scope) {
+    $scope.Details= [ 
+    { name:"Donifa", grade:"S"},
+    { name:"Ravi", grade:"S"},
+    { name:"Geetha", grade:"A"},
+    { name:"Sanjana", grade:"S"},
+    { name:"Siva", grade:"B"},
+    { name:"Berik", grade:"A"},
+    { name:"Ajay", grade:"A"}
+    ];   
+   
+}); 
+    </script>
+    </div>
+    </body>
+</html>

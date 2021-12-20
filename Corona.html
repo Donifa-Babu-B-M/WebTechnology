@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html ng-app="coronaApp">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="Corona.js"></script>
+    <style>
+        
+        * {box-sizing: border-box;
+        }
+        body {font-family:  'Times New Roman', Times, serif;
+        background-image: url(cool.jpg);
+        background-size: 1500px;}
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+        
+        #head{
+            text-align:center;
+            font-size: 25px;
+            color:Grey;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-shadow: 2px 2px 1px black,
+            2px 2px 1px black;
+        }
+        #button a{
+            background-color:white;
+            color:black;
+            width:100px;
+            text-align: center; 
+            display:inline-block;
+            font-size: 16px;
+            height: 40px;
+            text-decoration: none;
+            padding-top:8px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+  
+        }
+        #button a:hover{
+            background-color:black;
+            color:white;
+        }
+        
+table{
+    border: 2px solid white;
+    background-color: black;
+    color:white;
+  padding: 5px;
+  align-items: center;
+  font-size: 20px;
+}
+table th{
+    border: 2px solid black;
+  padding: 8px;
+}
+table td{
+    padding:5px;
+    text-align: center;
+}
+table tr:hover{
+    background-color: grey;
+    }
+p{
+    font-size:20px;
+}    
+input{
+    height:30px;
+    width:200px;
+    font-size:25px;
+    border: solid black;
+    background-color:white;
+    color:black;
+    padding:8px;
+    font-family:Aerial;
+    border-radius: 5px;
+}
+
+        </style>
+<head>
+    <title>Pandemic Over World</title>
+    </head>
+    <body>
+        <div id="head">
+            <h1>CORONA CASE DETAILS</h1>
+
+        </div>
+<div id="case" ng-app="coronaApp" ng-controller="coronaController">
+    <p>Enter State to display its details</p>
+    <input ng-model="state" type="text" ><br><br>
+<table>
+<th>S.No</th><th>STATE</th><th>ACTIVE CASES</th><th>CURED CASES</th><th>DEATH CASES</th>
+<tr ng-repeat="person in Details | filter:state"><td>{{$index + 1}}</td><td>{{person.name | uppercase}}</td><td>{{person.active}}</td><td>{{person.cured}}</td><td>{{person.death}}</td></tr>
+</table>
+</div>
+
+
+<script>
+    
+angular.module('coronaApp', [])
+.controller('coronaController', function($scope) {
+
+    $scope.Details= [ 
+    { name:"TamilNadu", active:"2,501",cured:"2,10,758",death:"15,789"},
+    { name:"kerala", active:"25,489",cured:"15,896",death:"18,823"},
+    { name:"Karnataka", active:"4,542",cured:"1,96,582",death:"4,545"},
+    { name:"Maharashtra", active:"5,896",cured:"3,75,589",death:"22,200"},
+    { name:"Delhi",active:"5,859",cured:"1,55,820",death:"17,205"},
+    { name:"Uttarkand", active:"4,520",cured:"22,569",death:"890"},
+    ];   
+
+
+
+   
+}); 
+
+</script>
+  </body>
+</html>

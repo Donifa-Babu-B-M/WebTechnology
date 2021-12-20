@@ -1,0 +1,97 @@
+<!DOCTYPE.html>
+<html>
+<head>
+<style type="text/css">
+body   {
+    color:#111111;
+    font-size:30px;
+    font-family:Aerial;
+    background:url("cont.png");
+    background-repeat:no-repeat;
+    background-size:100%;
+    width:100%;
+    text-align: left;
+
+}
+h1{
+    color:#000000;
+    font-size:40px;
+}
+p{
+    align-items: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size:20px;
+}
+input[type=text] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #111111;
+  color:#f1f1f1;
+  padding: 15px 32px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  float:left;
+}
+button.active{
+    background-color:#000000;
+    color:#ffffff;
+   }
+button:hover:not(.active) {
+    background-color:#f1f1f1;
+    color:#000000;
+  }
+#container{
+    margin:0px auto;
+    width:70%;
+  }
+</style>
+
+<head>
+  <title>Contact Us</title>
+</head>
+<body>
+
+<!-- Contact -->
+<div id=container>
+<h1>CONTACT US</h1>
+  <div class="w3-container">  
+    <form action="contact.php" method="POST" onsubmit="myFunction()">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name"name="Name" required ></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" name="Email" required ></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" name="Message" required ></p>
+      <p><button class="w3-button w3-black w3-padding-large" type="submit">SEND MESSAGE</button></p>
+      <br>
+      <br>
+    </form>
+
+<script>
+function myFunction() {
+  alert("The message was sent");
+}
+</script>
+<p style="text-align:left;;margin-left: 30px"><b>Write to us your queries !<br>
+    <i class="fa fa-map-marker" style="width:30px"></i> For any content related query on this website, 
+    <br>
+    <i class="fa fa-phone" style="width:30px"></i> Phone: +91 7562359878<br>
+    <i class="fa fa-envelope" style="width:30px"> </i> Email: sendqueries@mail.com<br>
+  </div>
+  </p>
+
+
+<p style="text-align:left;margin-left: 150px;">
+Site Designed & Developed for Health Montitoring System <br> 
+</p>
+</div>
+</body>
+
+</html>

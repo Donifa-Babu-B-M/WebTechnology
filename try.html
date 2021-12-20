@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script type="text/javascript">
+        angular.module("myFirst",[]);
+    </script>
+<style>
+body{
+    text-align:center ;
+    margin-left:300px;
+    width:50%;
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size:1500px;
+    font-size: 25px;
+    color:black;
+}
+input{
+    height:30px;
+    width:150px;
+    font-size:25px;
+    border: solid black;
+    background-color:white;
+    color:black;
+    font-family:Aerial;
+}
+</style>
+
+<title>
+    ASCII CONVERTER
+</title>
+<body>
+<h1>ASCII CONVERTER</h1>
+<div ng-app="myFirst">
+    <p>Enter the String : </p>
+    <input type="text" ng-model="Character" >
+    <!--<p>The Ascii value is {{String.charCodeAt(Character)}}</p>-->
+    <!--<script src="js/try.js"></script>-->
+    <script type="text/javascript">
+    for (let i = 0; i < Character.length; i++) {
+        let Answer= Character.charCodeAt(i) ;
+
+}
+</script>
+<div ng-repeat="i in Character">
+    
+<p>The Ascii value of Character at Index {{$index}} is {{ Character.charCodeAt($index) }}</p>
+
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>    
+    <head>    
+        <title>Updation of details</title>    
+    </head>  
+    <style>  
+     body {      
+    background:url("bk6.jpg");
+    background-size:1500px;
+    background-attachment:scroll;
+    background-repeat:no-repeat;
+    /*background-color:Cornsilk;*/
+    font-size:30 px;
+    font-family: Aerial;
+    width:100%;
+    }
+    input[type=text], select, textarea {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}  
+h1   {
+    color:black;
+    font-size:400%;
+    font-family:Aerial;
+    font-style:absolute;
+    text-align:center;
+    }
+ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    width:1300px;
+    
+    }
+li  {
+    float:left;
+    }
+li a {
+    display:block;
+    padding:15px;
+    font-size:20px;
+    color:#ffffff;
+    background-color:#000022;
+   }
+li a.active{
+    background-color:#000000;
+    color:#ffffff;
+   }
+li a:hover:not(.active) {
+    background-color:#ffffff;
+    color:#b4b4b4;}
+* {
+  box-sizing: border-box;
+  }
+
+.container {
+  position: absolute;
+  left:150px;
+  margin-top:0px;
+  margin: 20px;
+  width: 30%;
+  padding: 12px;
+  background-color:#000000;
+  color:cornsilk;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin: 4px 0 4px 0;
+  border: none;
+  background-color:White;
+  color:Black;
+}
+input[type=text]:focus,input[type=password]:focus {
+    background-color:cornsilk;
+  outline: none;
+  padding:15px;
+  width: 100%;
+  padding: 12px 6px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+label {
+  padding: 12px 6px 12px 0;
+  display: inline-block;
+}
+.btn {
+  background-color:White;
+  color: Black;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover{
+  color:White;
+  background-color: Black;
+}
+
+</style>
+    <body>    
+        
+        <h1><i>PROFILE</i></h1>    
+        <form name = "form1" action="UserProfile.php" method = "POST"  >    
+            <div class = "container">    
+                   
+                    <p >Name :</p>    
+                    <input type = "text" name = "Uname" value = "" required=""/>  
+                     
+                    <p >Age :</p>    
+                    <input type = "date" name = "UAge" value = "" required=""/> 
+
+                    <p >   
+                        Gender :  
+                    </p>
+                    <select type =" radio" name="UGender" required="">  
+                        <option value="Male" name="UGender">Male</option>  
+                        <option value="Female" name="UGender">Female</option>  
+                        <option value="Others" name="UGender">Others</option>   
+                    </select>
+                    <p >   
+                        Blood Group :  
+                    </p>
+                    <input type="text" name="UBlood" size="10" required=""/>  
+
+                    <p >Height :</p>    
+                    <input type = "text" name = "UHeight" value = "" required=""/> 
+
+                    <p >Weight :</p>    
+                    <input type = "text" name = "UWeight" value = "" required=""/> 
+
+                    <p>   
+                        Phone :  
+                    </p>  
+                      
+                        <input type="text" name="UPhone" size="10" required=""/> 
+                        
+                    <p>   
+                        Activity :  
+                    </p>   
+                        <select type =" radio" name="UActivity" required="">  
+                           
+                        <option value="Jogging" name="UActivity">Jogging</option>  
+                        <option value="yoga" name="UActivity">Yoga</option>  
+                        <option value="Meditation" name="UActivity">Meditation</option>  
+                        <option value="Diet" name="UActivity">Diet</option> 
+                        <option value="Others" name="UActivity">Others</option>   
+                        
+                        </select>  
+                    <p> Date of Activity : </p>    
+                    <input type = "date" name = "UDOA" value = "" required=""/> 
+                    <p>Time of Activity : </p>    
+                    <input type = "time" name = "Time" value = "" required=""/> 
+                        <br>     
+                        <br>  
+                        <br>  
+                        <button type="submit" class="btn"><strong>UPDATE</strong></button>
+          
+                  
+                 
+            </div>    
+           
+        </form>    
+    </body>    
+</html>    
